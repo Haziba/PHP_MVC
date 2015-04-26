@@ -1,5 +1,11 @@
 <?PHP
 
+require_once("db/Updater.php");
+
+Updater::CheckForUpdates();
+
+exit;
+
 $baseUri = "/MVC";
 
 $routingInfo = Array(Array("path" => '/\/Test\/([^\/]+)\/([^\/]+)\/([^\/]+)/', "vars" => Array("action", "data1", "data2"), "controller" => "Test", "action" => "Output", "data" => "Test"),
